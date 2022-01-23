@@ -1,5 +1,5 @@
 ---
-title: Adventures in static type checked Python!
+title: Adventures in Python static type checking
 created: 2022-01-18
 ---
 
