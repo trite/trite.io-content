@@ -5,7 +5,7 @@ created: 2022-01-30
 
 Working on [Advent of Code 2015 day 6 part 1](https://adventofcode.com/2015/day/6) in Python. This is a revisit to the problem for me. As such it presents the opportunity to easily add something neat (to me) for the sake of learning.
 
-Taking a stab at using [Pillow](https://pillow.readthedocs.io/en/stable/) to draw at least the final frame of the problem.
+Taking a stab at using [Pillow](https://pillow.readthedocs.io/en/stable/) to draw at least the final frame of the problem, and ideally an animation of the entire process.
 
 Figuring out a nice workflow to quickly test code changes is **vital** to any kind of rapid prototyping work. Setting up a good one in VSCode turned out to be pretty simple.
 
