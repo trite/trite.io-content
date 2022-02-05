@@ -1,0 +1,1 @@
+Will update this more later. Site content like posts live here, a site is coming eventually (probably).
