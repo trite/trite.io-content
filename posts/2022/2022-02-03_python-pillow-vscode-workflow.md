@@ -1,6 +1,6 @@
 ---
 title: Working with Pillow (Python Library) in VSCode 
-created: 2022-01-30
+created: 2022-02-03
 ---
 
 Working on [Advent of Code 2015 day 6 part 1](https://adventofcode.com/2015/day/6) in Python. This is a revisit to the problem for me. As such it presents the opportunity to easily add something neat (to me) for the sake of learning.

@@ -1,6 +1,7 @@
 ---
 title: Adventures in Python static type checking
 created: 2022-01-18
+last modified: 2022-02-04
 ---
 
 Coming back to Python this weekend for a job interview has gone from fun nostalgia to full-blown learning adventure. I haven't touched Python much in the last 3 years. My recent time has been spent heavily focusing on Functional Programming concepts, lots of Haskell and F#.
@@ -43,4 +44,4 @@ Once activated you'll either be greeted by basically nothing changing if your co
 * TypeVar to declare generic types, has no purpose other than type checking https://docs.python.org/3/library/typing.html#typing.TypeVar
 * Expand on this post: https://ncik-roberts.github.io/posts/pep622.html
   - Looks like Python treats the pipe in pattern matching as fully separating patterns, meaning each must implement the same guard if they all want to use it.
-  - A better approach for this might be to remove the guard from the pattern matching portion of the code and add a direct if into the execution portion, then all guards should follow it. Need to mess around with this.
+  - A better approach for this might be to remove the guard from the pattern matching portion of the code and add a direct if into the execution portion. Need to mess around with this.
