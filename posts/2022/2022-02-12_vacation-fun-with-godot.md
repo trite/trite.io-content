@@ -7,7 +7,7 @@ Switching gears from [Advent of Code](http://adventofcode.com) to mess with the 
 
 There's a game that has some neat concepts, but I would love to explore in a different direction. The game is called [Nova Drift](https://novadrift.io/). In 2 words, it's an [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) [roguelike](https://en.wikipedia.org/wiki/Roguelike). It can be a good way to kill some time, even if it is an assault visually once in a while:
 
-![nova drift chaos](img/godot-fun-nova-drift-chaos.gif)
+![nova drift chaos](gif/godot-fun-nova-drift-chaos.gif)
 
 # External editor
 Gotten really used to some basic [Vim](https://www.vim.org/) keybindings lately. The built-in Godot editor is fairly nice, but support for Vim-style usage is lacking (missing?). It does, however, have support for connecting to an external editor. Just plug in the appropriate executable (VSCode for me):
@@ -16,7 +16,7 @@ Gotten really used to some basic [Vim](https://www.vim.org/) keybindings lately.
 
 Now opening scripts in Godot will defer to VSCode:
 
-![vscode external editing in action](img/godot-fun-external-editor-in-action.gif)
+![vscode external editing in action](gif/godot-fun-external-editor-in-action.gif)
 
 In combination with the [godot-tools VSCode extension](https://marketplace.visualstudio.com/items?itemName=geequlim.godot-tools) it makes for quite a nice editing experience.
 
@@ -36,6 +36,7 @@ The ship will need to be able to accelerate and decelerate, and we want these ma
 
 # Scripts
 Coming back to add more details later, especially on the rotation logic. For now here's how the player movement script is looking. `Player.gd`:
+
 ```gdscript
 extends RigidBody2D
 
@@ -123,6 +124,7 @@ func _integrate_forces(state):
 ```
 
 And some debug info to make life easier. `DebugInfo.gd`:
+
 ```gdscript
 extends Label
 
@@ -141,3 +143,6 @@ func _process(_delta):
 	
 	text = msg
 ```
+
+# Rotation issue
+Focusing on this in [this post](2022-02-19_godot-rotating-rigidbody2d.md).

@@ -77,7 +77,7 @@ img.save(
 
 This will cause the animation frames to load in the wrong order:
 
-![busted](img/pillow-vscode-workflow-busted-animation.gif)
+![busted](gif/pillow-vscode-workflow-busted-animation.gif)
 
 Simply updating the filename to include leading zeroes for the image number will ensure the sorting we want in this case:
 
@@ -89,4 +89,4 @@ for o, i in zip(range(0, 250, 10), range(10000)):
 
 And it's looking good now:
 
-![fixed](img/pillow-vscode-workflow-fixed-animation.gif)
+![fixed](gif/pillow-vscode-workflow-fixed-animation.gif)
