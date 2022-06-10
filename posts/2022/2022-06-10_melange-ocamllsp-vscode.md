@@ -18,15 +18,12 @@ trite@DESKTOP-0ACBTNR:/mnt/c/git/hackerrank-melange$ esy code .
 # Double check your LSP version
 At the time of writing this (2022-06-10) the OCaml LSP requires use of a specific version to correctly work with Melange. This should change soon. 
 
-<details><summary>@mayhewluke on the ReasonML discord provided a nice explanation (slightly modified here, original linked below):</summary>
+<details><summary>@mayhewluke on the ReasonML discord provided a nice explanation</summary>
 <p>
-
-```
-Dune 3.0 provides an RPC server for language services to get the Merlin info from instead of writing to actual .merlin files, so ocaml-lsp 1.9.0 removed support for reading .merlin in favor of talking to Dune directly. Melange has to use .merlin for various reasons, so we used to pin LSP to 1.8.3, but 1.8.3 doesn't work with ocaml 4.14, so when melange updated to 4.14 language support broke.
-
-@anmonteiro whipped up the --fallback... flag a few weeks ago, I think, but we don't yet have a release with it. A release has been requested, and apparently might land some time next week.
-https://discord.com/channels/436568060288172042/946816636197929080/984506621382250527 <== previous discussion on the topic
-```
+> Dune 3.0 provides an RPC server for language services to get the Merlin info from instead of writing to actual .merlin files, so ocaml-lsp 1.9.0 removed support for reading .merlin in favor of talking to Dune directly. Melange has to use .merlin for various reasons, so we used to pin LSP to 1.8.3, but 1.8.3 doesn't work with ocaml 4.14, so when melange updated to 4.14 language support broke.
+> 
+> @anmonteiro whipped up the --fallback... flag a few weeks ago, I think, but we don't yet have a release with it. A release has been requested, and apparently might land some time next week.
+> https://discord.com/channels/436568060288172042/946816636197929080/984506621382250527 <== previous discussion on the topic
 
 [Link to the original comment](https://discord.com/channels/235176658175262720/825155604641218580/984837516194635786) <== You may need to have joined the ReasonML discord for the link to work. [Link to the ReasonML Discord](https://discord.gg/reasonml)
 </p>
