@@ -7,15 +7,7 @@ Look at this poor mistreated instance of VSCode as it tries it's best to start t
 
 ![All kinds of sadness](img/ocamllsp-issues-wrong-version.png)
 
-# 1. Check that you launched from `esy`
-Launching an app via `esy` allows it to run in the context of the appropriate [sandbox environment](https://esy.sh/docs/en/concepts.html#project-sandbox). If you aren't sure if the app was launched from esy, you can kill it and start it back up.
-
-Example usage - run `esy [app] [args]` from the root of your project, where your `esy.json` file lives:
-```sh
-trite@DESKTOP-0ACBTNR:/mnt/c/git/hackerrank-melange$ esy code .
-```
-
-# 2. Double check your LSP version
+# 1. Double check your LSP version
 At the time of writing this (2022-06-10) the OCaml LSP requires use of a specific version to correctly work with Melange. This should change soon.
 
 @mayhewluke on the ReasonML discord provided a nice explanation:
@@ -33,14 +25,26 @@ Check that you have the following in your `devDependencies` in `esy.json`:
     "@opam/dot-merlin-reader": "4.2",
 ```
 
-# 3. Check how you are launching the LSP in your editor
-The goal is to get your editor of choice to launch the OCaml LSP with the following command:
+# 2. Check how you are launching the LSP in your editor
+Launching an app via `esy` allows it to run in the context of the appropriate [sandbox environment](https://esy.sh/docs/en/concepts.html#project-sandbox). The goal is to get your editor of choice to launch the OCaml LSP with the following command:
+
 ```sh
 esy ocamllsp --version --fallback-read-dot-merlin
 ```
 
 ## a. VSCode
-Save the following in `./vscode/settings.json` from your project's root directory and either restart the OCaml language server or reload VSCode entirely. See either example below, which use VSCode's [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) feature:
+Save the following in `./vscode/settings.json` from your project's root directory:
+
+```json
+{
+    "ocaml.sandbox": {
+        "kind": "custom",
+        "template": "esy $prog $args --fallback-read-dot-merlin"
+    }
+}
+```
+
+Now either restart the OCaml language server or reload VSCode entirely. See either example below, which use VSCode's [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) feature:
 
 ![Command Palette feature at VSCode site](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/OpenCommandPalatte.gif)
 https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_command-palette
