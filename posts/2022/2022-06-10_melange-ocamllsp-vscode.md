@@ -17,7 +17,9 @@ At the time of writing this (2022-06-10) the OCaml LSP requires use of a specifi
 > @anmonteiro whipped up the `--fallback...` flag a few weeks ago, I think, but we don't yet have a release with it. A release has been requested, and apparently might land some time next week.
 > https://discord.com/channels/436568060288172042/946816636197929080/984506621382250527 <== previous discussion on the topic
 
-[Link to the original comment](https://discord.com/channels/235176658175262720/825155604641218580/984837516194635786) <== You may need to have joined the ReasonML discord for the link to work. [Link to the ReasonML Discord](https://discord.gg/reasonml)
+[Link to the original comment](https://discord.com/channels/235176658175262720/825155604641218580/984837516194635786) <== You may need to have joined the ReasonML discord for the link to work.
+
+[Link to the ReasonML Discord](https://discord.gg/reasonml) <== The #melange channel is a good place to come learn more and ask any questions you might have!
 
 Check that you have the following in your `devDependencies` in `esy.json`:
 ```json
