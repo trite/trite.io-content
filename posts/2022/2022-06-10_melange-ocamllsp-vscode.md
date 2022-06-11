@@ -47,14 +47,17 @@ Save the following in `./vscode/settings.json` from your project's root director
 Now either restart the OCaml language server or reload VSCode entirely. See either example below, which use VSCode's [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) feature:
 
 ![Command Palette feature at VSCode site](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/OpenCommandPalatte.gif)
+
 https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_command-palette
 
 ### VSCode - Restart OCaml language server
 ![restarting OCaml LSP](img/vscode-restart-ocamllang.png)
+
 I highly recommend adding a keybind to this command if you end up using it a lot.
 
 ### VSCode - Reload VSCode
 ![reloading VSCode](img/vscode-reload-window.png)
+
 Sometimes VSCode needs a bit more of a nudge. If restarting the language server doesn't seem to have done what it probalby should, you can always try this next.
 
 **IMPORTANT:** If you restart VSCode and get a warning along the lines of `The OCaml Language Server crashed 5 times in the last 3 minutes. It will not be restarted` you need to **run the OCaml language server restart AGAIN AFTER running the VSCode reload**. Couldn't force my VSCode to give this error again so that wording is not exact and I have no screenshot of it :-(.
