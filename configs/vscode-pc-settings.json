@@ -1,0 +1,60 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "errorLens.enabledDiagnosticLevels": [
+        "warning",
+        "info",
+        "error"
+    ],
+    "FSharp.addFsiWatcher": true,
+    "FSharp.infoPanelShowOnStartup": true,
+    "editor.inlineSuggest.enabled": true,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "gitlens.advanced.messages": {
+        "suppressImproperWorkspaceCasingWarning": true
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "editor.fontFamily": "Fira Code Retina",
+    "editor.fontLigatures": true,
+    "vim.useCtrlKeys": false,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-u>": true,
+        "<C-r>": true,
+        "<C-i>": true,
+        "<C-o>": true
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "k",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "html.format.enable": false,
+    "python.analysis.typeCheckingMode": "strict",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.fontSize": 13,
+    "godot_tools.editor_path": "C:\\godot\\app\\godot.exe",
+    "errorLens.enabled": true,
+    "haskell.manageHLS": "GHCup",
+    "editor.formatOnSave": true
+}
