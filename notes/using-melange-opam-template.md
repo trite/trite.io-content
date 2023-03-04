@@ -18,7 +18,7 @@ Steps to take:
 * Rename the `melange-opam-template.opam` file in the root of the project to your project name while keeping the `.opam` file extension, ex: `my-project.opam`.
 * **Important** - Commit your changes or the next step will ignore said changes and things likely won't work as intended.
 * From a terminal in the root of your project run `make init`. This step may take around 5-15 minutes depending on your particular environment, but it only needs to be done when setting up the repo on a new machine.
-* You may need to run `eval $(opam env)` at this point, pay attention for a message about it in the last few lines of output from the `make init` command.
+* You may need to run `eval $(opam env)` at this point, pay attention for a message about it in the last few lines of output from the `make init` command. It's also fine to just run it at this point if you're not sure.
 * If you're using VSCode make sure to close it and launch it from the terminal by running `code .` from the root of your project.
 * Run `make watch` in one terminal to build and then watch for changes.
 * If using VSCode and it's unhappy at this point try running `OCaml: Restart Language Server` from the command palette (`CTRL+SHIFT+P`/`CMD+SHIFT+P`).
