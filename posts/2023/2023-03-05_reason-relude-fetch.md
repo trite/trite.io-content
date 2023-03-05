@@ -9,15 +9,11 @@ Finally creating a site to house the content that lives in my [trite.io-content]
 
 One important step for this means using [the fetch api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch). This can mean creating bindings by hand from Reason or using the [bs-fetch](https://github.com/reasonml-community/bs-fetch) library. Fortunately I like working with the [Relude](https://github.com/reazen/relude) standard library already, and there's an accompanying library [relude-fetch](https://github.com/reazen/relude-fetch) which makes it easy to work with fetch in a more idiomatic functional programming way!
 
-# The problem: promises don't compose well
+# The problem
+To use fetch from ReasonML means either creating bindings by hand or using a library that has taken care of this already.
 
-Working with fetch via direct bindings means managing javascript promises:
+The `bs-fetch` library knocks out the basics, but leaves us with `promises` as the main method of interaction:
 
-```
-TODO: fetch binding example goes here when I find where I left it
-```
-
-The `bs-fetch` library takes care of a lot of the basics, but leaves us with `promises` as the main method of interaction:
 ```ocaml
 Js.Promise.(
   Fetch.fetch("/api/hellos/1")
@@ -26,21 +22,25 @@ Js.Promise.(
 );
 ```
 
-TODO still: Promises are ok, but they can be a bit unwieldy and lack some expressiveness that can be attained through the power of `MONADS` (insert `amaze` face here?)
+Promises are fine and all, but both JavaScript and ReasonML have better mechanisms for dealing with asynchronous behavior.
 
+In JavaScript this usually means using async/await. In functional languages like ReasonML this often means using `monads`, which is what this post will focus on.
 
-# The solution: IO monad
-
-`relude-fetch` takes the `fetch` promise and converts it to a `Relude.IO`. This takes something that is composes clumsily and turns it into a compositional powerhouse through the power of monads!
+# The solution
+`relude-fetch` takes the `bs-fetch` promise and converts it to use `Relude.IO`. This takes something that composes poorly and turns it into a compositional powerhouse!
 
 [Here](https://github.com/reazen/relude-fetch/blob/master/src/ReludeFetch.re#L9) is where `relude-fetch` takes the [bs-fetch](https://github.com/reasonml-community/bs-fetch) bindings and turns them up to 11:
+
 ```ocaml
-  let fetch: string => Relude.IO.t(Fetch.response, Js.Promise.error) =
-    url =>
-      Relude.IO.suspendIO(() => Relude.Js.Promise.toIO(Fetch.fetch(url)));
+let fetch: string => Relude.IO.t(Fetch.response, Js.Promise.error) =
+  url =>
+    Relude.IO.suspendIO(() => Relude.Js.Promise.toIO(Fetch.fetch(url)));
 ```
 
+So how exactly does one use this?
 
+# Usage
+Start by defining the type interface for errors. Doing this first will simplify later usage:
 
 ```ocaml
 module Error = {
@@ -52,11 +52,39 @@ module Error = {
 };
 
 module IOE = IO.WithError(Error.Type);
-open IOE.Infix;
+```
 
+Once done you can then access the available infix operators to further simplify usage:
+
+```ocaml
+open IOE.Infix;
+```
+
+Now you have access to the monadic bind operator `>>=` which allows for easier function composition. For example one could write a simple function to take a uri as input and return either the page content as a string, or else an error:
+
+```ocaml
 let fetchString = uri => ReludeFetch.fetch(uri) >>= ReludeFetch.Response.text;
 ```
+
+Here's what it looks like to use our newly created `fetchString` command:
+
+```ocaml
+uri
+|> fetchString
+|> IO.map(content => setter(_ => content))
+|> IO.mapError(error => setter(_ => error |> ContentFetch.Error.show))
+|> IO.unsafeRunAsync(Result.fold(() => (), () => ()));
+```
+
+Here is what's going on in the above code:
+* The first line is our `uri` in string format.
+* The second line (`fetchString`) applies our function, which lifts everything into an IO. This IO is an operation that is "waiting" to happen, but won't actually do anything just yet.
+* The third line (`IO.map`) specifies what to do with the result if the fetch call was successful. In this case using a React state setter function to update some component with the response body.
+* The fourth line (`IO.mapError`) specifies what to do with the error if the fetch call failed. This example would convert the error to a string and then display it using the same setter function.
+* The fifth line (`IO.unsafeRunAsync`) finally runs the operation, causing the fetch call to fire and then handling either the result (`IO.map`) or failure (`IO.mapError`).
 
 # More reading
 * [async/await is just the do-notation of the Promise monad](https://gist.github.com/peter-leonov/c86720d1517235a1f28cd453a9d39bb4)
 * [Promises are Almost Monads](https://siawyoung.com/promises-are-almost-monads)
+* [relude-fetch test examples](https://github.com/reazen/relude-fetch/blob/master/__tests__/ReludeFetch_test.re)
+* [relude-fetch usage demo](https://github.com/reazen/relude-fetch/tree/master/examples/demo)
