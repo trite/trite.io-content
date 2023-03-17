@@ -9,7 +9,7 @@ While working on [Day 09](https://adventofcode.com/2022/day/9) of [Advent of Cod
 
 You need to tell `Set` how to compare items in order for it to be able to properly order its items and guarantee they are distinct. This can be done by creating a custom type and leveraging `Set.WithOrd` to wire up the comparison and equality functionality like so:
 
-```reasonml
+```reason
 module Position = {
   type t = (int, int);
 
@@ -33,7 +33,7 @@ module Position = {
 
 Once that's done you can create an empty set and add items to it quite easily:
 
-```reasonml
+```reason
 Position.Set.empty
 |> Position.Set.add((0, 0))
 |> Position.Set.add((12, 34))
