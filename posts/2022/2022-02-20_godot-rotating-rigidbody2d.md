@@ -91,7 +91,7 @@ It's not perfect - ideally we should just return `delta * maxTurnRate` unless th
 Experimenting with different modifications to drawing like colors and opacity as well as ways to alter the ship's path like planetary gravity.
 A few examples from recent testing:
 
-![example 01](gif/spiro-examples-01.gif)
-![example 02](gif/spiro-examples-02.gif)
-![example 03](gif/spiro-examples-03.gif)
-![example 04](gif/spiro-examples-04.gif)
+![example 01](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-01.gif)
+![example 02](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-02.gif)
+![example 03](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-03.gif)
+![example 04](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-04.gif)
