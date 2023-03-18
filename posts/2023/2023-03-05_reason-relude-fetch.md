@@ -14,7 +14,7 @@ To use fetch from ReasonML means either creating bindings by hand or using a lib
 
 The `bs-fetch` library knocks out the basics, but leaves us with `promises` as the main method of interaction:
 
-```ocaml
+```reason
 Js.Promise.(
   Fetch.fetch("/api/hellos/1")
   |> then_(Fetch.Response.text)
@@ -31,7 +31,7 @@ In JavaScript this usually means using async/await. In functional languages like
 
 [Here](https://github.com/reazen/relude-fetch/blob/master/src/ReludeFetch.re#L9) is where `relude-fetch` takes the [bs-fetch](https://github.com/reasonml-community/bs-fetch) bindings and turns them up to 11:
 
-```ocaml
+```reason
 let fetch: string => Relude.IO.t(Fetch.response, Js.Promise.error) =
   url =>
     Relude.IO.suspendIO(() => Relude.Js.Promise.toIO(Fetch.fetch(url)));
@@ -42,7 +42,7 @@ So how exactly does one use this?
 # Usage
 Start by defining the type interface for errors. Doing this first will simplify later usage:
 
-```ocaml
+```reason
 module Error = {
   type t = ReludeFetch.Error.t(string);
   let show = error => ReludeFetch.Error.show(a => a, error);
@@ -56,19 +56,19 @@ module IOE = IO.WithError(Error.Type);
 
 Once done you can then access the available infix operators to further simplify usage:
 
-```ocaml
+```reason
 open IOE.Infix;
 ```
 
 Now you have access to the monadic bind operator `>>=` which allows for easier function composition. For example one could write a simple function to take a uri as input and return either the page content as a string, or else an error:
 
-```ocaml
+```reason
 let fetchString = uri => ReludeFetch.fetch(uri) >>= ReludeFetch.Response.text;
 ```
 
 Here's what it looks like to use our newly created `fetchString` command:
 
-```ocaml
+```reason
 uri
 |> fetchString
 |> IO.map(content => setter(_ => content))
