@@ -14,4 +14,4 @@ Pretty simple set of steps in this case:
  * use the `send` command: `send hello trite`
 
 Like so:
-![example](img/telnet-akka-usage.png)
+![example](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/telnet-akka-usage.png)

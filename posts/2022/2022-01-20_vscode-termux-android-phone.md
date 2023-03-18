@@ -21,8 +21,8 @@ The `--ignore-engines` flag may not have been needed in the end, I'm still a lit
 
 Either way here's some shots of the install progress on my phone, `pkg` and `yarn` installs together probably took about 10-15 minutes, perhaps less:
 
-![pkg install command](img/vscode-phone-installing-p1.jpg)
-![yarn install command](img/vscode-phone-installing-p2.jpg)
+![pkg install command](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-phone-installing-p1.jpg)
+![yarn install command](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-phone-installing-p2.jpg)
 
 Once installed it's time to fire up the VSCode server:
 
@@ -31,23 +31,23 @@ $ code-server &
 ```
 It will start and then notify you about a config.yaml file that you'll need to open for a password when connecting to the server:
 
-![starting up vscode](img/vscode-phone-starting-vscode.jpg)
+![starting up vscode](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-phone-starting-vscode.jpg)
 
 Now opening a browser and navigating to the supplied uri (localhost on 8080 in this case):
 
-![vscode browser login](img/vscode-phone-browser-login.jpg)
+![vscode browser login](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-phone-browser-login.jpg)
 
 At this point crack open that config file and snag the password:
 
-![vscode password](img/vscode-phone-cat-file-for-password.jpg)
+![vscode password](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-phone-cat-file-for-password.jpg)
 
 Logging in should show the good old welcome screen:
 
-![vscode welcome screen](img/vscode-phone-welcome-screen.jpg)
+![vscode welcome screen](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-phone-welcome-screen.jpg)
 
 Hello world in python:
 
-![vscode python hello world](img/vscode-phone-python-hello.jpg)
+![vscode python hello world](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-phone-python-hello.jpg)
 
 # Links
 Some of the links visited during this, solution largely ended up being a combination of several of these:

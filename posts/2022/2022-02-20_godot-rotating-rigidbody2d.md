@@ -8,17 +8,17 @@ Been having fun with [Godot](https://godotengine.org/) the last week while on va
 # Soft turns
 Without knowing proper terminology for the behavior this is difficult to try to demonstrate, time for some pictures/videos! First up is the original turn method I tried:
 
-![soft turning example 1](gif/soft-turning-example-1.gif)
+![soft turning example 1](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/soft-turning-example-1.gif)
 
 The ship immediately begins rotating at a decent rate, then slows down as it gets closer to pointing at its destination.
 
-![soft turning example 1](gif/soft-turning-example-2.gif)
+![soft turning example 1](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/soft-turning-example-2.gif)
 
 In order to obtain the best rate of rotation you need to act as though you're going to rotate past the destination to get the best performance out of your ship. In the context of a video game where bullets come out of the front of your ship and need to aim at your target this is counter-intuitive to gameplay.
 
 So how does Nova Drift act for comparison?
 
-![nova drift turning example](gif/nova-drift-turning.gif)
+![nova drift turning example](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/nova-drift-turning.gif)
 
 Without debug info to provide hard numbers this is guessing, but the ship appears to rotate at a mostly constant rate. It might be slowing slightly as it approaches the target, or it might just look that way to my eyes.
 
