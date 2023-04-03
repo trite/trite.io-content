@@ -38,7 +38,7 @@ It means that when you don't want to (or can't) talk to another person about you
 You'll need to think quite a bit about the information it gives you, after also thinking about how to put the question or problem you have into words. And all that thinking is great for problem solving, even if the information given isn't quite right.
 
 # Example: OCaml type sadness
-I usually work in ReasonML, which is (oversimplified) an OCaml syntax that can be used to write type-safe JavaScript. I have been dipping my toes more into OCaml itself though, in order to get a better feel for the overall ecosystem and a stronger understanding of how the many tools within it interact.
+I usually work in ReasonML, which is (oversimplified) an OCaml syntax that can be used to write type-safe JavaScript. I have been dipping my toes more into the OCaml pool, in order to get a better feel for the overall ecosystem and a stronger understanding of how the many tools within it interact.
 
 This weekend that has included making an OCaml project from scratch. This project is a sandbox to learn, and focuses on coding challenges like Advent of Code (AoC). I started into the 2022 AoC challenge in ReasonML last year before getting sidetracked and stopping in the middle of Day 9.
 
@@ -76,7 +76,7 @@ A `list of lists of integers` isn't what's wanted in this particular case though
 Great! Now the `list of integers` can be passed on to the next part of the program.
 
 # Making it point-free (tacit programming)
-Sometimes in functional programming it can be nice to [express functions without their input arguments](https://en.wikipedia.org/wiki/Tacit_programming). This is known as `point-free style` or `tacit programming`. It's 
+Sometimes in functional programming it can be nice to [express functions without their input arguments](https://en.wikipedia.org/wiki/Tacit_programming). This is known as `point-free style` or `tacit programming`.
 
 This can, in some cases, be as simple as dropping the arguments to the function and switching from using pipes (`|>` in OCaml/ReasonML) to function composition (sometimes expressed as `>>`).
 
