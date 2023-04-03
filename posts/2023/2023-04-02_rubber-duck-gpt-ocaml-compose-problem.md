@@ -80,7 +80,7 @@ Sometimes in functional programming it can be nice to [express functions without
 
 This can, in some cases, be as simple as dropping the arguments to the function and switching from using pipes (`|>` in OCaml/ReasonML) to function composition (sometimes expressed as `>>`).
 
-A `pipe` is used to "pipe" data through functions. Here's some examples:
+A `pipe` is used to "pipe" data through functions. Here's an example:
 
 ```ocaml
 (* point-free *)
