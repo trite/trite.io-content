@@ -4,9 +4,10 @@ created: 2023-03-03
 ---
 
 Pre-requisites:
-* Need [OPAM](https://opam.ocaml.org/) and [NPM](https://www.npmjs.com/) installed
-* Need [make](https://www.gnu.org/software/make/) installed
-* If using VSCode you'll need the `OCaml Platform` extension installed
+* [OPAM](https://opam.ocaml.org/) installed
+* [NPM](https://www.npmjs.com/) installed
+* [Make](https://www.gnu.org/software/make/) installed
+* If using VSCode you'll usually want the `OCaml Platform` extension installed
 * Maybe other things depending on your OS. Watch for errors during the `make init` step below. If you're missing a pre-requisite it'll show up in those errors
 
 Steps to take:
@@ -15,8 +16,9 @@ Steps to take:
 * Do a project-wide search/replace:
   - Search for all instances of `melange-opam-template`.
   - Replace with your project name, ex: `my-project`. I had issues with names containing a dot (`.`). If you use a dot in the name and these steps do not work that may be why.
+  - **NOTE:** if you do this replace via VSCode you'll want to close it at this point and re-open again after you have run both the `make init` and `eval $(opam env)` steps below.
 * Rename the `melange-opam-template.opam` file in the root of the project to your project name while keeping the `.opam` file extension, ex: `my-project.opam`.
-* **Important** - Commit your changes or the next step will ignore said changes and things likely won't work as intended.
+* **Important** - Commit your changes or the next step may ignore said changes and things likely won't work as intended.
 * From a terminal in the root of your project run `make init`. This step may take around 5-15 minutes depending on your particular environment, but it only needs to be done when setting up the repo on a new machine.
 * You may need to run `eval $(opam env)` at this point, pay attention for a message about it in the last few lines of output from the `make init` command. It's also fine to just run it at this point if you're not sure.
 * If you're using VSCode make sure to close it and launch it from the terminal by running `code .` from the root of your project.
