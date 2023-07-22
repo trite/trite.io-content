@@ -1,6 +1,6 @@
 ---
 title: Weird build error in dotnet project file extension not recognized
-created: 2023-04-01
+created: 2023-07-21
 ---
 
 Ran into this error today in a F# project:
