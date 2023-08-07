@@ -1,0 +1,134 @@
+{
+  // Language formatting stuff
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[fsharp]": {
+    "editor.tabSize": 4,
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "[gdscript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Start screencast mode automatically for streaming, I forget to do it otherwise
+  "auto-run-command.rules": [
+    {
+      "condition": "always",
+      "command": "workbench.action.toggleScreencastMode",
+      "message": "Turn on screencast on startup"
+    }
+  ],
+  // Don't remember what caused this to end up here, but as I don't use a screen reader it's fine
+  "editor.accessibilitySupport": "off",
+  // Prefer custom indentation settings
+  "editor.detectIndentation": false,
+  // Ligatures FTW
+  "editor.fontFamily": "Fira Code",
+  // I repeat: Ligatures FTW
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  // Relative line numbers are great for VIM mode
+  "editor.lineNumbers": "relative",
+  // Visual markers at 80 and 120 characters
+  "editor.rulers": [
+    80,
+    120
+  ],
+  // 2 is plenty imo
+  "editor.tabSize": 2,
+  // "explorer.fileNexting.*" = Visual grouping of related files
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.tex": "${capture}.aux, ${capture}.fdb_latexmk, ${capture}.fls, ${capture}.log, ${capture}.out, ${capture}.synctex.gz"
+  },
+  "FSharp.indentationSize": 2,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "never",
+  // Gotta have a little bit of AI
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "tex": false
+  },
+  "godot_tools.editor_path": "C:\\stuff\\Godot\\v41\\GodotSharp\\Godot_v4.1-stable_mono_win64.exe",
+  // If using Godot > 4.0 this port is now 6005 instead of 6008
+  "godot_tools.gdscript_lsp_server_port": 6005,
+  // Screencasting is great for pair programming and streaming
+  "screencastMode.fontSize": 36,
+  "screencastMode.keyboardOverlayTimeout": 1250,
+  "screencastMode.verticalOffset": 5,
+  // TODO-Tree rules, I like having some custom tags
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "TODO-LowPri",
+    "TODO-MedPri",
+    "TODO-HighPri",
+    "TODO-Low",
+    "TODO-Med",
+    "TODO-High"
+  ],
+  // Easymotion is an additional great way to move around
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "vim.handleKeys": {
+    // I like CTRL+F for VSCode's find
+    "<C-f>": false,
+    // CTRL+D/U for half page up/down (u is already enabled)
+    "<C-d>": true,
+    // Too used to saving with CTRL+S still
+    "<C-s>": false,
+    // CTRL+Z because the VIM extension in VSCode has problems with undo sometimes
+    "<C-z>": false
+  },
+  "vim.highlightedyank.enable": true,
+  "vim.leader": "<space>",
+  // Remap `?` to the normal `/` behavior
+  // Remap `/` to the easymotion 
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "?"
+      ],
+      "after": [
+        "/"
+      ]
+    },
+    {
+      "before": [
+        "/"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "/"
+      ]
+    },
+  ],
+  // Why on earth isn't this defaulted to on?
+  "vim.useSystemClipboard": true,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Default Dark Modern",
+}
