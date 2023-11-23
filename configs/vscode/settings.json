@@ -101,12 +101,14 @@
     // Too used to saving with CTRL+S still
     "<C-s>": false,
     // CTRL+Z because the VIM extension in VSCode has problems with undo sometimes
-    "<C-z>": false
+    "<C-z>": false,
+    // CTRL+P for VSCode's quick open
+    "<C-p>": false
   },
   "vim.highlightedyank.enable": true,
   "vim.leader": "<space>",
   // Remap `?` to the normal `/` behavior
-  // Remap `/` to the easymotion 
+  // Remap `/` to easymotion 
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -130,5 +132,5 @@
   // Why on earth isn't this defaulted to on?
   "vim.useSystemClipboard": true,
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Default Dark Modern"
 }
