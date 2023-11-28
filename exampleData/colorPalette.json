@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Red",
+    "hex": "#FF0000",
+    "hsv": {
+      "hue": 0,
+      "saturation": 100,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  {
+    "name": "Green",
+    "hex": "#00FF00",
+    "hsv": {
+      "hue": 120,
+      "saturation": 100,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 120,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  {
+    "name": "Blue",
+    "hex": "#0000FF",
+    "hsv": {
+      "hue": 240,
+      "saturation": 100,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 240,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  {
+    "name": "Yellow",
+    "hex": "#FFFF00",
+    "hsv": {
+      "hue": 60,
+      "saturation": 100,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 60,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  {
+    "name": "Cyan",
+    "hex": "#00FFFF",
+    "hsv": {
+      "hue": 180,
+      "saturation": 100,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 180,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  {
+    "name": "Magenta",
+    "hex": "#FF00FF",
+    "hsv": {
+      "hue": 300,
+      "saturation": 100,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 300,
+      "saturation": 100,
+      "lightness": 50
+    }
+  },
+  {
+    "name": "Black",
+    "hex": "#000000",
+    "hsv": {
+      "hue": 0,
+      "saturation": 0,
+      "value": 0
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 0
+    }
+  },
+  {
+    "name": "White",
+    "hex": "#FFFFFF",
+    "hsv": {
+      "hue": 0,
+      "saturation": 0,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 100
+    }
+  },
+  {
+    "name": "Gray",
+    "hex": "#808080",
+    "hsv": {
+      "hue": 0,
+      "saturation": 0,
+      "value": 50
+    },
+    "hsl": {
+      "hue": 0,
+      "saturation": 0,
+      "lightness": 50
+    }
+  },
+  {
+    "name": "Orange",
+    "hex": "#FFA500",
+    "hsv": {
+      "hue": 39,
+      "saturation": 100,
+      "value": 100
+    },
+    "hsl": {
+      "hue": 39,
+      "saturation": 100,
+      "lightness": 50
+    }
+  }
+]
