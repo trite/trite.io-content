@@ -1,3 +1,7 @@
+---
+title: Basics of relude-fetch library in ReasonML
+---
+
 # Why?
 
 Finally creating a site to house the content that lives in my [trite.io-content](https://github.com/trite/trite.io-content) repository. The end goal is to build a javascript app via ReasonML that will fetch its actual content through Github API calls to the `trite.io-content` repo.
