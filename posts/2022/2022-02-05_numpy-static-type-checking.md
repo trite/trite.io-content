@@ -14,7 +14,7 @@ One of the first things I wanted to do is experiment with the conversion between
 <div class="post-image">![blah](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-partially-unknown.png)</div>
 
 Here's that full error message in all its hideous glory (formatted somewhat):
-```
+{% capture code_block_content %}
 Type of "asarray" is partially unknown
     Type of "asarray" is "
         Overload [
@@ -59,7 +59,8 @@ Type of "asarray" is partially unknown
             ndarray[Any, dtype[Any]]
         ]
     "PylancereportUnknownMemberType
-```
+{% endcapture %}
+{% include code_block.html lang="python" content=code_block_content %}
 
 So what's going on here? Basically we're working with an [overloaded function/method](https://en.wikipedia.org/wiki/Function_overloading). Following the function definition for `numpy.asarray` (`F12` by default in VSCode) reveals the following function signatures:
 
@@ -92,7 +93,7 @@ Ignoring one line can work pretty well. It comes with drawbacks, and can add exp
 # Potholes 
 Time to analogize briefly. Picture a street (or 3):
 
-<div class="post-image">![which would you rather travel?](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-road-analogy.png)</div>
+<div class="post-image">![which would you rather travel](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-road-analogy.png)</div>
 
 The first section of road is fully type checked. Traveling it requires `less mental effort` than the street with a few potholes, which in turn requires less than the third street. Ignoring even a single line like this moves us from street `1` to street `2` in the image:
 

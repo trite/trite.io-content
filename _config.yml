@@ -4,9 +4,17 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
+markdown: kramdown
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
 domain: trite.github.io
 url: https://trite.github.io
 baseurl: /trite.io-content/
