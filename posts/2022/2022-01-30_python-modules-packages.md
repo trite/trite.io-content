@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Python modules and packages
 created: 2022-01-30
 ---

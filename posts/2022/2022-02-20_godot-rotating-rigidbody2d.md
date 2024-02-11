@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Rotating RigidBody2D in Godot for spirographs!
 created: 2022-02-20
 ---
@@ -8,17 +9,17 @@ Been having fun with [Godot](https://godotengine.org/) the last week while on va
 # Soft turns
 Without knowing proper terminology for the behavior this is difficult to try to demonstrate, time for some pictures/videos! First up is the original turn method I tried:
 
-![soft turning example 1](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/soft-turning-example-1.gif)
+<div class="post-image">![soft turning example 1](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/soft-turning-example-1.gif)</div>
 
 The ship immediately begins rotating at a decent rate, then slows down as it gets closer to pointing at its destination.
 
-![soft turning example 1](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/soft-turning-example-2.gif)
+<div class="post-image">![soft turning example 1](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/soft-turning-example-2.gif)</div>
 
 In order to obtain the best rate of rotation you need to act as though you're going to rotate past the destination to get the best performance out of your ship. In the context of a video game where bullets come out of the front of your ship and need to aim at your target this is counter-intuitive to gameplay.
 
 So how does Nova Drift act for comparison?
 
-![nova drift turning example](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/nova-drift-turning.gif)
+<div class="post-image">![nova drift turning example](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/nova-drift-turning.gif)</div>
 
 Without debug info to provide hard numbers this is guessing, but the ship appears to rotate at a mostly constant rate. It might be slowing slightly as it approaches the target, or it might just look that way to my eyes.
 
@@ -91,7 +92,7 @@ It's not perfect - ideally we should just return `delta * maxTurnRate` unless th
 Experimenting with different modifications to drawing like colors and opacity as well as ways to alter the ship's path like planetary gravity.
 A few examples from recent testing:
 
-![example 01](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-01.gif)
-![example 02](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-02.gif)
-![example 03](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-03.gif)
-![example 04](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-04.gif)
+<div class="post-image">![example 01](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-01.gif)</div>
+<div class="post-image">![example 02](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-02.gif)</div>
+<div class="post-image">![example 03](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-03.gif)</div>
+<div class="post-image">![example 04](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/spiro-examples-04.gif)</div>

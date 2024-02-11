@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+
+    <!-- Prism -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>{{ site.title }}</h1>
+      {% if page.title %}
+        <h2>{{ page.title }}</h2>
+      {% endif %}
+    </header>
+
+    <div class="container">
+      {{ content }}
+    </div>
+
+    <footer>
+      <a href="{{ '/' | relative_url }}">Back to home</a>
+    </footer>
+  </body>
+</html>

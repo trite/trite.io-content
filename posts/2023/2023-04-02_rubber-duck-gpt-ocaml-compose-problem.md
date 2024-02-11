@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Dune build failure trying to make an OCaml library
 created: 2023-04-01
 ---

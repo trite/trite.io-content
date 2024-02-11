@@ -1,3 +1,9 @@
+---
+layout: post
+title: Using Emacs with Melange
+created: 2022-10-07
+---
+
 Make sure you are on ocaml 4.14.0 or later.
 
 For doom emacs:

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Configuring Jest to work with ReScript
 created: 2022-04-13
 ---

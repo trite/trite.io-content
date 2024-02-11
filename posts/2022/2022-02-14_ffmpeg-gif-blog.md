@@ -1,4 +1,5 @@
 ---
+layout: post
 title: FFmpeg and GIF-ifying Videos
 created: 2022-02-14
 ---

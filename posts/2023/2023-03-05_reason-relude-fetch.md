@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Basics of relude-fetch library in ReasonML"
-date: 2023-03-05 00:00:00 -0700
-categories: CATEGORY-1 CATEGORY-2
+created: 2023-03-05
+categories: ReasonML
 ---
 
 # Why?

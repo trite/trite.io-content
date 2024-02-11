@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Remembering how to use telnet 
 created: 2022-03-05
 ---
@@ -14,4 +15,4 @@ Pretty simple set of steps in this case:
  * use the `send` command: `send hello trite`
 
 Like so:
-![example](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/telnet-akka-usage.png)
+<div class="post-image">![example](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/telnet-akka-usage.png)</div>

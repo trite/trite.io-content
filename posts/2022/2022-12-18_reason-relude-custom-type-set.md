@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Using Relude's `Set.t` functionality
 created: 2022-12-18
 ---

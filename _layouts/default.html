@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  </head>
+  <body>
+    <header>
+      <h1>{{ site.title }}</h1>
+      {% if page.title %}
+        <h2>{{ page.title }}</h2>
+      {% endif %}
+    </header>
+
+    <div class="container">
+      {{ content }}
+    </div>
+
+    <footer>
+      <a href="{{ '/' | relative_url }}">Back to home</a>
+    </footer>
+  </body>
+</html>

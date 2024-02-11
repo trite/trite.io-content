@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Adventures in Python static type checking
 created: 2022-01-18
 last modified: 2022-02-04

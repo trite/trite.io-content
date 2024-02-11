@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Weird build error in dotnet project file extension not recognized
 created: 2023-07-21
 ---
