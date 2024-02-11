@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Will update this more later. Site content like posts live here, a site is coming eventually (probably).",
   "main": "index.js",
+  "scripts": {
+    "serve": "bundle exec jekyll serve --port 5000"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trite/trite.io-content.git"
