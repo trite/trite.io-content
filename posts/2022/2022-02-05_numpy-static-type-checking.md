@@ -14,8 +14,8 @@ One of the first things I wanted to do is experiment with the conversion between
 ![blah](img/numpy-type-checking-partially-unknown.png)
 
 Here's that full error message in all its hideous glory (formatted somewhat):
-{% capture code_block_content %}
-Type of "asarray" is partially unknown
+{% highlight python linenos %}
+Type of "asblaharray" is partially unknown
     Type of "asarray" is "
         Overload [
             (
@@ -59,8 +59,7 @@ Type of "asarray" is partially unknown
             ndarray[Any, dtype[Any]]
         ]
     "PylancereportUnknownMemberType
-{% endcapture %}
-{% include code_block.html lang="python" content=code_block_content %}
+{% endhighlight %}
 
 So what's going on here? Basically we're working with an [overloaded function/method](https://en.wikipedia.org/wiki/Function_overloading). Following the function definition for `numpy.asarray` (`F12` by default in VSCode) reveals the following function signatures:
 
@@ -97,25 +96,25 @@ Time to analogize briefly. Picture a street (or 3):
 
 The first section of road is fully type checked. Traveling it requires `less mental effort` than the street with a few potholes, which in turn requires less than the third street. Ignoring even a single line like this moves us from street `1` to street `2` in the image:
 
-```python
+{% highlight python linenos %}
 from PIL import Image
 import numpy as np
 
 im = Image.new('RGB', (1000, 1000), (0, 0, 0))
 arr = np.asarray(im) # type: ignore
 print(arr)
-```
+{% endhighlight %}
 
 Now there's a pothole to watch out for. But it's just 1, and it's pretty easy to watch out for. Just don't do something like this and you're all set!
 
-```python
+{% highlight python linenos %}
 import numpy as np
 
 # im = Image.new('RGB', (1000, 1000), (0, 0, 0))
 im = 'blah'
 arr = np.asarray(im) # type: ignore
 print(arr)
-```
+{% endhighlight %}
 
 Of course each thing that gets ignored must now be tracked by you, the developer. That can add up much faster than most folks realize.
 
@@ -124,18 +123,18 @@ What if we could take advantage of being lazy and ignoring this complex type sig
 # Carefully ignoring types
 A simple wrapper function can be the ramen in this tortured analogy, we just have to mold it into the right shape:
 
-```python
+{% highlight python linenos %}
 from PIL import Image
 import numpy as np
 import numpy.typing as npt
 
-def asarray(img: Image.Image) -> npt.NDArray[np.uint8]:
+def asarray(img: Image.Image) ->> npt.NDArray[np.uint8]:
     return np.asarray(img) # type: ignore
 
 im = Image.new('RGB', (1000, 1000), (0, 0, 0))
 arr = asarray(im)
 print(arr)
-```
+{% endhighlight %}
 
 This local `asarray` function now forces correct type usage in pyright! VSCode will yell at us when passing the wrong type to our function:
 

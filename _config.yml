@@ -6,6 +6,7 @@ gist:
   noscript: false
 markdown: kramdown
 kramdown:
+  input: GFM
   math_engine: mathjax
   syntax_highlighter: rouge
   syntax_highlighter_opts:
@@ -15,6 +16,7 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
+  entity_output: as_char
 domain: trite.io
 url: https://trite.io
 baseurl: /
