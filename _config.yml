@@ -15,6 +15,7 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
-domain: trite.github.io
-url: https://trite.github.io
-baseurl: /trite.io-content/
+domain: trite.io
+url: https://trite.io
+baseurl: /
+title: trite.io - posts
