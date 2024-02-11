@@ -6,7 +6,7 @@ created: 2022-06-10
 
 Look at this poor mistreated instance of VSCode as it tries it's best to start the OCaml LSP with the wrong settings. Does your VSCode instance look like this? You're in luck (unless you're not), read on!
 
-<div class="post-image">![All kinds of sadness](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/ocamllsp-issues-wrong-version.png)</div>
+![All kinds of sadness](img/ocamllsp-issues-wrong-version.png)
 
 # 1. Double check your LSP version
 At the time of writing this (2022-06-10) the OCaml LSP requires use of a specific version to correctly work with Melange. This should change soon.
@@ -49,17 +49,17 @@ Save the following in `./vscode/settings.json` from your project's root director
 
 Now either restart the OCaml language server or reload VSCode entirely. See either example below, which use VSCode's [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) feature:
 
-<div class="post-image">![Command Palette feature at VSCode site](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/OpenCommandPalatte.gif)</div>
+![Command Palette feature at VSCode site](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/OpenCommandPalatte.gif)
 
 https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_command-palette
 
 ### VSCode - Restart OCaml language server
-<div class="post-image">![restarting OCaml LSP](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-restart-ocamllang.png)</div>
+![restarting OCaml LSP](img/vscode-restart-ocamllang.png)
 
 I highly recommend adding a keybind to this command if you end up using it a lot.
 
 ### VSCode - Reload VSCode
-<div class="post-image">![reloading VSCode](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/vscode-reload-window.png)</div>
+![reloading VSCode](img/vscode-reload-window.png)
 
 Sometimes VSCode needs a bit more of a nudge. If restarting the language server doesn't seem to have done what it probalby should, you can always try this next.
 

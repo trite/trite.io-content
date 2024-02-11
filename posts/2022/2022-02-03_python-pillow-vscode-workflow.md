@@ -20,23 +20,23 @@ draw = ImageDraw.Draw(im)
 
 im.save('test.jpg', quality=95)
 ```
-<div class="post-image">![Creating the image](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/pillow-vscode-workflow-initial-code.png)</div>
+![Creating the image](img/pillow-vscode-workflow-initial-code.png)
 
 Open the image and then either drag it by its tab to the side or use hotkeys to split your view (default: `CTRL+\`).
 
-<div class="post-image">![Splitting by dragging](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/pillow-vscode-workflow-drag-pane-split.png)</div>
+![Splitting by dragging](img/pillow-vscode-workflow-drag-pane-split.png)
 
 Initial view after splitting:
 
-<div class="post-image">![demo-001](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/pillow-vscode-workflow-demo-001.png)</div>
+![demo-001](img/pillow-vscode-workflow-demo-001.png)
 
 Now all you should have to do is F5 after adding some lines to see the updated picture. By overwriting the same file each time and having VSCode watch that file you get live updates for free.
 
-<div class="post-image">![demo-001](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/pillow-vscode-workflow-demo-002.png)</div>
+![demo-001](img/pillow-vscode-workflow-demo-002.png)
 
 In the event that F5/CTRL+F5 do not work for you make sure to check that you have an appropriate [launch.json](https://code.visualstudio.com/docs/editor/debugging) file:
 
-<div class="post-image">![demo-001](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/pillow-vscode-workflow-launch-json.png)</div>
+![demo-001](img/pillow-vscode-workflow-launch-json.png)
 
 # Some simple fun
 The final plan is to have an animation of each command being run. This is a good chance to make sure things work right first and goof around some.
@@ -78,7 +78,7 @@ img.save(
 
 This will cause the animation frames to load in the wrong order:
 
-<div class="post-image">![busted](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/pillow-vscode-workflow-busted-animation.gif)</div>
+![busted](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/pillow-vscode-workflow-busted-animation.gif)
 
 Simply updating the filename to include leading zeroes for the image number will ensure the sorting we want in this case:
 
@@ -90,4 +90,4 @@ for o, i in zip(range(0, 250, 10), range(10000)):
 
 And it's looking good now:
 
-<div class="post-image">![fixed](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/pillow-vscode-workflow-fixed-animation.gif)</div>
+![fixed](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/pillow-vscode-workflow-fixed-animation.gif)

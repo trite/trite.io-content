@@ -11,7 +11,7 @@ I have already [solved the base problem](https://github.com/trite/advent-of-code
 # Type of "[something]" is partially unknown
 One of the first things I wanted to do is experiment with the conversion between numpy's `ndarray` and pillow's `Image` types. This is also where the first type constraints will be a problem for the type checker ([Pyright in this case](https://github.com/microsoft/pyright)):
 
-<div class="post-image">![blah](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-partially-unknown.png)</div>
+![blah](img/numpy-type-checking-partially-unknown.png)
 
 Here's that full error message in all its hideous glory (formatted somewhat):
 {% capture code_block_content %}
@@ -64,11 +64,11 @@ Type of "asarray" is partially unknown
 
 So what's going on here? Basically we're working with an [overloaded function/method](https://en.wikipedia.org/wiki/Function_overloading). Following the function definition for `numpy.asarray` (`F12` by default in VSCode) reveals the following function signatures:
 
-<div class="post-image">![overloaded function signatures](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-asarray-overloaded.png)</div>
+![overloaded function signatures](img/numpy-type-checking-asarray-overloaded.png)
 
 Don't worry if both of these just seem like walls of garbage. There's a lot to unpack, hopefully this might help a bit:
 
-<div class="post-image">![overloaded function signatures comparison](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-asarray-overloaded-comparison.png)</div>
+![overloaded function signatures comparison](img/numpy-type-checking-asarray-overloaded-comparison.png)
 
 Left side of the above image shows the function definitions, right side shows the error message with formatting applied. What this effectively means is:
 
@@ -93,7 +93,7 @@ Ignoring one line can work pretty well. It comes with drawbacks, and can add exp
 # Potholes 
 Time to analogize briefly. Picture a street (or 3):
 
-<div class="post-image">![which would you rather travel](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-road-analogy.png)</div>
+![which would you rather travel](img/numpy-type-checking-road-analogy.png)
 
 The first section of road is fully type checked. Traveling it requires `less mental effort` than the street with a few potholes, which in turn requires less than the third street. Ignoring even a single line like this moves us from street `1` to street `2` in the image:
 
@@ -139,8 +139,8 @@ print(arr)
 
 This local `asarray` function now forces correct type usage in pyright! VSCode will yell at us when passing the wrong type to our function:
 
-<div class="post-image">![asarray wrapper error](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-wrapping-asarray-error.png)</div>
+![asarray wrapper error](img/numpy-type-checking-wrapping-asarray-error.png)
 
 And works as intended with the proper type:
 
-<div class="post-image">![asarray wrapper working](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/numpy-type-checking-wrapping-asarray.png)</div>
+![asarray wrapper working](img/numpy-type-checking-wrapping-asarray.png)

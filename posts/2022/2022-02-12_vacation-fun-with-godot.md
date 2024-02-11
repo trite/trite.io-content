@@ -8,32 +8,32 @@ Switching gears from [Advent of Code](http://adventofcode.com) to mess with the 
 
 There's a game that has some neat concepts, but I would love to explore in a different direction. The game is called [Nova Drift](https://novadrift.io/). In 2 words, it's an [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) [roguelike](https://en.wikipedia.org/wiki/Roguelike). It can be a good way to kill some time, even if it is an assault visually once in a while:
 
-<div class="post-image">![nova drift chaos](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/godot-fun-nova-drift-chaos.gif)</div>
+![nova drift chaos](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/godot-fun-nova-drift-chaos.gif)
 
 # External editor
 Gotten really used to some basic [Vim](https://www.vim.org/) keybindings lately. The built-in Godot editor is fairly nice, but support for Vim-style usage is lacking (missing?). It does, however, have support for connecting to an external editor. Just plug in the appropriate executable (VSCode for me):
 
-<div class="post-image">![connect vscode to godot](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/godot-fun-external-editor-settings.png)</div>
+![connect vscode to godot](img/godot-fun-external-editor-settings.png)
 
 Now opening scripts in Godot will defer to VSCode:
 
-<div class="post-image">![vscode external editing in action](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/godot-fun-external-editor-in-action.gif)</div>
+![vscode external editing in action](https://github.com/trite/trite.io-content/raw/main/posts/2022/gif/godot-fun-external-editor-in-action.gif)
 
 In combination with the [godot-tools VSCode extension](https://marketplace.visualstudio.com/items?itemName=geequlim.godot-tools) it makes for quite a nice editing experience.
 
 # First things first: Art Assets
 Borrowing some existing artwork is certainly an option, there's lots of royalty-free choices these days! I'd rather take a little time to make some assets from scratch, even if they might not be amazing. First off a nice generic space background: couple lighter colors for that gas cloud/nebula feel, and some stars:
 
-<div class="post-image">![space background](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/godot-fun-background.png)</div>
+![space background](img/godot-fun-background.png)
 
 And a nice generic ship to go with it for now:
 
-<div class="post-image">![ship](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/godot-fun-ship.png)</div>
+![ship](img/godot-fun-ship.png)
 
 # Controls
 The ship will need to be able to accelerate and decelerate, and we want these mapped to specific buttons:
 
-<div class="post-image">![controls](https://github.com/trite/trite.io-content/raw/main/posts/2022/img/godot-fun-controls.png)</div>
+![controls](img/godot-fun-controls.png)
 
 # Scripts
 Coming back to add more details later, especially on the rotation logic. For now here's how the player movement script is looking. `Player.gd`:
