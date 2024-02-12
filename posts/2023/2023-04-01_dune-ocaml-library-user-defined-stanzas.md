@@ -10,6 +10,7 @@ Trying to learn more about ReasonML, OCaml, and Dune to better understand how to
 To that end I have been working on creating an [ocaml project](https://github.com/trite/ocaml_coding_exercises) to use for coding exercises. An executable doesn't make the most sense to me for this kind of usage, so creating the project as a library. 
 
 With a `src/dune` file set to the below snippet the build would fail. First the snippet:
+
 ```lisp
 (include_subdirs qualified)
 
@@ -18,6 +19,7 @@ With a `src/dune` file set to the below snippet the build would fail. First the 
 ```
 
 And here's the error it produces:
+
 ```shell
 opam exec -- dune build
 Error: The package ocaml_coding_exercises does not have any user defined
@@ -38,6 +40,7 @@ Which in turn lead to the [library stanza reference](https://dune.readthedocs.io
 
 # The Solution
 Simply add a `public_name` stanza inside the `library` stanza like so:
+
 ```lisp
 (include_subdirs qualified)
 

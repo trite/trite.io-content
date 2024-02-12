@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dune build failure trying to make an OCaml library
-created: 2023-04-01
+title: Rubber Duck GPT - OCaml Compose Problems
+created: 2023-04-02
 ---
 
 # RubberDuckGPT
